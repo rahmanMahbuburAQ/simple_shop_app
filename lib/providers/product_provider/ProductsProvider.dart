@@ -29,7 +29,7 @@ class Products with ChangeNotifier {
        id: '04',
        title: 'iphone15',
        description: 'It is a new version phone of 2027!',
-       image: 'assets/images/iphone12',
+       image: 'assets/images/iphone12.jpg',
        price: 18000,
      ),
      Product(

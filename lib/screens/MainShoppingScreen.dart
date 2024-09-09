@@ -25,12 +25,15 @@ class _MainShoppingScreenState extends State<MainShoppingScreen> {
     return SafeArea(
       child: Scaffold(
         floatingActionButton: FloatingActionButton.extended(
-            backgroundColor: Colors.pink,
+            backgroundColor: Colors.red[500],
+            foregroundColor: Colors.white,
             onPressed: () {
               Navigator.of(context).pushNamed(OrdersScreen.id);
             }, label: Text('My Orders')),
         appBar: AppBar(
-          title: Text("Phone Shop67"),
+          title: Text("Phone71"),
+          foregroundColor: Colors.white,
+          backgroundColor: Colors.red[500],
           actions: [
             PopupMenuButton(
               onSelected: (int selectedVal) {
@@ -99,8 +102,8 @@ class ProductsGrid extends StatelessWidget {
       gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
         crossAxisCount: 2,
         childAspectRatio: 1 / 1,
-        crossAxisSpacing: 10,
-        mainAxisSpacing: 30,
+        crossAxisSpacing: 6,
+        mainAxisSpacing: 40,
       ),
     );
   }

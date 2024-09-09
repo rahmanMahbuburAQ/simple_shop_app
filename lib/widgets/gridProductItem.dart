@@ -29,7 +29,7 @@ class GridProductItem extends StatelessWidget {
                 },
                 child: Image.asset(product.image)),
             footer: GridTileBar(
-              title: Text(product.title,textAlign: TextAlign.center,style: TextStyle(fontSize: 10),),
+              title: Text(product.title,textAlign: TextAlign.center,style: TextStyle(fontSize: 8),),
               backgroundColor: Colors.black54,
               leading: IconButton(icon: product.isFavorite ? Icon(Icons.favorite): Icon(Icons.favorite_border),
                 onPressed:() { product.toggleIsFav(); },),

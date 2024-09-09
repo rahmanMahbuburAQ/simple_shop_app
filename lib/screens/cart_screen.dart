@@ -13,7 +13,9 @@ class CartScreen extends StatelessWidget {
     final cart = Provider.of<Cart>(context);
     return Scaffold(
       appBar: AppBar(
-        title: Text('Your Cart'),
+        title: Text('My Cart'),
+        backgroundColor: Colors.red[500],
+        foregroundColor: Colors.white,
       ),
       body: Column(
         children: [
@@ -34,7 +36,7 @@ class CartScreen extends StatelessWidget {
                             totalPrice: cart.totalToPay);
                         cart.clearCart();
                       },
-                      child: Text("Order Now"))
+                      child: Text("Order Now!!!"))
                 ],
               ),
             ),
