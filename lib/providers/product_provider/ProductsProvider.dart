@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '../models/product.dart';
+import 'package:simple_shop_app/providers/product_provider/product.dart';
 
 class Products with ChangeNotifier {
   // Private list of available products
@@ -25,18 +25,34 @@ class Products with ChangeNotifier {
       image: 'assets/images/iphone14.png',
       price: 12000,
     ),
+     Product(
+       id: '04',
+       title: 'iphone15',
+       description: 'It is a new version phone of 2027!',
+       image: 'assets/images/iphone14.png',
+       price: 12000,
+     ),
+     Product(
+       id: '05',
+       title: 'iphone16',
+       description: 'It is a new version phone of 2028!',
+       image: 'assets/images/iphone14.png',
+       price: 12000,
+     ),
   ];
 
    List<Product>get favoriteProducts{
      return _availProducts.where((product)=> product.isFavorite).toList();
    }
 
+   List<Product> get availProducts => _availProducts;
 
-   // Getter to expose the products list
-  List<Product> get availProducts => _availProducts;
-}
+   // void addProduct(value){
+   //   _availProducts.add(value);
+   //   notifyListeners();
+   // }
 
-// void addProduct(value){
-//   _availProducts.add(value);
-//   notifyListeners();
-// }
+   Product findById(String id){
+     return _availProducts.firstWhere((product)=> product.id == id);
+   }
+}// }
